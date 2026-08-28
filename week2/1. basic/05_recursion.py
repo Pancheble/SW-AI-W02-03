@@ -37,8 +37,6 @@ def factorial(n):
 
     if n == 0 or n == 1:
         return 1
-
-
     
     # TODO: recursive case를 작성하세요
 
@@ -61,8 +59,6 @@ def fibonacci(n):
         return 0
     if n == 1:
         return 1
-
-    
 
     # TODO: recursive case를 작성하세요
 

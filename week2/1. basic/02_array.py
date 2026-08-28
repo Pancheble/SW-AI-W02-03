@@ -51,8 +51,6 @@ def rotate_matrix_90(matrix):
         rotated.append(list())
         for j in range(n):
             rotated[i].append(0)
-
-
         
     # TODO: 원본 배열의 각 요소를 회전된 위치에 배치하세요
     # 힌트: (i, j) 위치의 요소는 회전 후 (j, n-1-i) 위치로 이동 

@@ -44,8 +44,6 @@ def is_palindrome(s):
             string.append(i.lower())
     pass
 
-
-    
     # TODO: 정제된 문자열이 회문인지 확인하세요
     # 방법1: 문자열을 뒤집어서 비교 ([::-1] 사용)
     # 방법2: 양 끝 인덱스를 이용한 투 포인터 방식
