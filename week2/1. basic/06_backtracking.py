@@ -141,6 +141,7 @@ def combinations(n: int, k: int) -> list:
         # - 복사본 만드는 방법: list(current_combination)  또는 current_combination[:]
         #
         # TODO(Level 1): 아래 두 줄을 직접 작성하세요.
+        
         if len(current_combination) == k:
             result.append(list(current_combination))
             return
