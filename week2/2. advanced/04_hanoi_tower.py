@@ -78,16 +78,15 @@ def hanoi_moves(n: int) -> list:
 
     hanoi_list = []
 
-    def hanoi_main(n, start, bojo, end):
-        if n == 1:
-            hanoi_list.append((start, end))
+    def move(k, src, via, dst):
+        if k == 0:
             return
         
-        hanoi_main(n -1 , start, end, bojo)
-        hanoi_list.append((start, end))
-        hanoi_main(n -1 , bojo, start, end)
+        move(k - 1 , src, dst, via)
+        hanoi_list.append((src, dst))
+        move(k - 1 , via, src, dst)
 
-    hanoi_main(n, 1, 2, 3)
+    move(n, 1, 2, 3)
     return hanoi_list
 
 if __name__ == "__main__":

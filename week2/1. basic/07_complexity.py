@@ -36,7 +36,7 @@ def find_duplicates_brute_force(nums):
     ## 같은 원소를 찾으면 duplicates에 추가 (중복 추가 방지 필요)
 
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if nums[i] == nums[j]:
                 if nums[i] not in duplicates:
                     duplicates.append(nums[i])

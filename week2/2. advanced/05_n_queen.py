@@ -68,7 +68,29 @@ def n_queens(n: int) -> int:
     #       ...
     #   place(0)
     #   return count
-    pass
+
+    cols = [0] * n
+    count = 0
+    
+    def is_ganeung(row, col):
+        for i in range(row):
+            if cols[i] == col or abs(cols[i] - col) == row - i:
+                return False
+        return True
+
+    def place(row):
+        nonlocal count
+        if row == n:
+            count += 1
+            return
+        for col in range(n):
+            if is_ganeung(row, col):
+                cols[row] = col
+                place(row + 1)
+
+    place(0)
+    return count
+
 
 
 if __name__ == "__main__":
