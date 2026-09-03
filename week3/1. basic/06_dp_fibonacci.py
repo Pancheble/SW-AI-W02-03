@@ -82,7 +82,8 @@ def fibonacci_memo(n, memo=None):
         n번째 피보나치 수
     """
     # TODO: memo가 None이면 빈 딕셔너리로 초기화
-    pass
+    if memo == None:
+        memo = dict()
     
     # TODO: base case 
     pass
