@@ -86,13 +86,17 @@ def fibonacci_memo(n, memo=None):
         memo = dict()
     
     # TODO: base case 
-    pass
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
     
     # TODO: 이미 계산한 값이 memo에 있으면 반환
-    pass
+    if n in memo:
+        return memo[n]
     
     # TODO: 재귀 호출하여 계산하고 memo에 저장
-    pass
+    memo.update({n: fibonacci_memo(n - 1, memo) + fibonacci_memo(n - 2, memo)})
     
     return memo[n]
 
