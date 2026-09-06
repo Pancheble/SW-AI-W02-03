@@ -1,11 +1,7 @@
-edges = [
-    (0, 1),  # 0 → 1
-    (0, 2),  # 0 → 2
-    (1, 3),  # 1 → 3
-]
-graph = dict()
+s1 = 'qweqr'
+s2 = 'qwer'
 
-for i, j in edges:
-    graph.setdefault(i, []).append(j)
+dp = [[0] * (len(s1)+1) for _ in range((len(s2)+1))]
 
-print(graph)
+
+print(dp)
