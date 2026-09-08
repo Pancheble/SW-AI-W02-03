@@ -1,7 +1,5 @@
-s1 = 'qweqr'
-s2 = 'qwer'
+n = 5
+INF = float('inf')
 
-dp = [[0] * (len(s1)+1) for _ in range((len(s2)+1))]
-
-
-print(dp)
+dist = [INF * i for i in range(1, n + 1)]
+print(dist)
