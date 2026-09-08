@@ -85,13 +85,6 @@ def dijkstra(n: int, edges: list, start: int) -> list:
     dist[start] = 0
 
     # TODO: 우선순위 큐(heapq)로 BFS-like 최단경로 탐색
-    """
-    bsf로 큐에 다 떄려 박고
-    현재 노드에서 최단거리 간선으로 가까운 노드로 이동하고
-    그 노드에서 최단거리 검색해서 본인의 (최단거리 노드 + 최단거리)가 이미 만들어놓은 최단거리보다
-    크면 버리고 아니면 갱신 그리고 그 노드 푸시
-    """
-
     heapqueue = list();   heapq.heapify(heapqueue)
     heapq.heappush(heapqueue, (0, start))
 
@@ -99,7 +92,7 @@ def dijkstra(n: int, edges: list, start: int) -> list:
         (d, u) = heapq.heappop(heapqueue)
         if d > dist[u]:
             continue
-        
+
         for v, w in graph.get(u, []):
             if dist[u] + w < dist[v]:
                 dist[v] = dist[u] + w
